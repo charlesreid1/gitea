@@ -112,7 +112,7 @@ func (r *Renderer) Image(out *bytes.Buffer, link []byte, title []byte, alt []byt
 		} else {
 			lnk := string(link)
 			lnk = util.URLJoin(prefix, lnk)
-			lnk = strings.Replace(lnk, " ", "+", -1)
+			lnk = strings.Replace(lnk, " ", "-", -1)
 			link = []byte(lnk)
 		}
 	}

@@ -377,7 +377,7 @@ func RenderShortLinks(rawBytes []byte, urlPrefix string, noLink bool, isWikiMark
 		}
 		absoluteLink := isLink([]byte(link))
 		if !absoluteLink {
-			link = strings.Replace(link, " ", "+", -1)
+			link = strings.Replace(link, " ", "-", -1)
 		}
 		if image {
 			if !absoluteLink {
