@@ -67,7 +67,7 @@ func RenderWiki(filename string, rawBytes []byte, urlPrefix string, metas map[st
 }
 
 func render(parser Parser, rawBytes []byte, urlPrefix string, metas map[string]string, isWiki bool) []byte {
-	urlPrefix = strings.Replace(urlPrefix, " ", "+", -1)
+	urlPrefix = strings.Replace(urlPrefix, " ", "-", -1)
 	result := parser.Render(rawBytes, urlPrefix, metas, isWiki)
 	result = PostProcess(result, urlPrefix, metas, isWiki)
 	return SanitizeBytes(result)
